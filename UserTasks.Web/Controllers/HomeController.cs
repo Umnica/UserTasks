@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Globalization;
+using System.Reflection;
 using UserTasks.Web.Models;
 
 namespace UserTasks.Web.Controllers
@@ -18,13 +19,15 @@ namespace UserTasks.Web.Controllers
         {
             return View();
         }
-        
-        
-
 
         public IActionResult Privacy()
         {
-            return View();
+            TimeStampViewModel model = new TimeStampViewModel
+            {
+                TimeStamp = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"))
+            };
+
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

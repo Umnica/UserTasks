@@ -1,9 +1,7 @@
-﻿@using System.Globalization
+﻿@model TimeStampViewModel
 @{
     ViewData["Title"] = "Privacy Policy";
 }
 <h1>@ViewData["Title"]</h1>
-@{
-    ViewData["TimeStamp"] = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"));
-}
-<p>Это веб приложение находится в разработке с @ViewData["TimeStamp"]</p>
+
+<p>Это веб-приложение находится в разработке с @Model.TimeStamp</p>
