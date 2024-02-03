@@ -20,15 +20,10 @@ namespace UserTasks.Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Privacy => View(new TimeStampViewModel
         {
-            TimeStampViewModel model = new TimeStampViewModel
-            {
-                TimeStamp = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"))
-            };
-
-            return View(model);
-        }
+            TimeStamp = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"))
+        });
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
