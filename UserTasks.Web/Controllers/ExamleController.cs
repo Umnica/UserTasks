@@ -8,7 +8,6 @@ namespace UserTasks.Web.Controllers
         // GET: ExamleController
         public ActionResult Index()
         {
-            _logger.LogDebug("public ActionResult Index()");
             return View(Index);
         }
 
