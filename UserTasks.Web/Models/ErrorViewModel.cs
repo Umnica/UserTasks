@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace UserTasks.Web.Models
 {
     public class ErrorViewModel
@@ -5,5 +7,6 @@ namespace UserTasks.Web.Models
         public string? RequestId { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+
     }
 }
