@@ -18,11 +18,10 @@ namespace UserTasks.Web.Controllers
 
         public IActionResult Index() => View();
 
-        public IActionResult Privacy() =>
-            View(new TimeStampViewModel
-            {
-                TimeStamp = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"))
-            });
+        public IActionResult Privacy() => View(new TimeStampViewModel
+        {
+            TimeStamp = DateTime.Now.ToString("dd.MM.yyyy", new CultureInfo("en-US"))
+        });
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error() =>
