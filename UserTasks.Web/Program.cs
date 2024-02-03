@@ -28,7 +28,7 @@ namespace UserTasks.Web
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Examle}/{action=Index}/{id?}");
 
             app.Run();
         }
